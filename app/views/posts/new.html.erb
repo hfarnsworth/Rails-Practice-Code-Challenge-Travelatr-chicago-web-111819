@@ -1,0 +1,16 @@
+<h1>Make a Post, yo</h1>
+
+<%= form_for @post do |f| %>
+    <%= f.label :blogger %>
+    <%= f.collection_select(:blogger_id, @bloggers, :id, :name, prompt: "Blogger Select" ) %><br>
+
+    <%= f.label :destination %>
+    <%= f.collection_select(:destination_id, @destinations, :id, :name, prompt: "Post Destination") %><br><br><br>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %><br><br>
+
+    <%= f.label :content %>
+    <%= f.text_area :content, size: "30x10" %>
+    <%= f.submit %>
+<% end %>

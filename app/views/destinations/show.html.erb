@@ -1,0 +1,11 @@
+<h1><%= @destination.name %></h1>
+
+<p><%= @destination.country %></p>
+
+<h3>Recent Posts:</h3>
+<% @recents.each do |post| %>
+    <p><%= link_to post.title, post %></p>
+<% end %>
+
+<h3>Most Liked Post</h3>
+<%= link_to @most_liked.title, @most_liked %>

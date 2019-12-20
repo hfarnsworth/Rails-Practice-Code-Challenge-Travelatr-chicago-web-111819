@@ -1,0 +1,11 @@
+<h1><%= @blogger.name %></h1>
+<p><%= @blogger.name %> is <%= @blogger.age %> years old</p>
+
+<h2>Bio</h2>
+<p><%= @blogger.bio %></p>
+
+<h3>Total Likes</h3>
+<p><%= @likes %></p>
+
+<h3>Featured Blog Post</h3>
+<p><%= link_to "#{@blogger.name}'s most popular blog post",  @popular_post %></p>
